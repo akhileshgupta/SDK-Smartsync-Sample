@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CocaCola</string>
+    <string name="account_type">us.cocacola.login</string>
+    <string name="app_package">us.cocacola</string>
+</resources>

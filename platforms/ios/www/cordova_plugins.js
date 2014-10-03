@@ -81,7 +81,7 @@ module.exports.metadata =
 {
     "com.salesforce": "2.3.0",
     "org.apache.cordova.statusbar": "0.1.7",
-    "org.apache.cordova.network-information": "0.2.11",
+    "org.apache.cordova.network-information": "0.2.12",
     "org.apache.cordova.device": "0.2.11",
     "com.phonegap.plugins.PushPlugin": "2.2.1"
 }

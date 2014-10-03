@@ -1,0 +1,5 @@
+# cache for current jar dependency. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1408566484000 1141964 ef348209d301a97a96a0f57954d54f80244a1614 /Users/agupta/temp/Offline Demo/plugins/com.salesforce/src/android/libs/SmartStore/libs/guava-r09.jar
+1408566483000 1141964 ef348209d301a97a96a0f57954d54f80244a1614 /Users/agupta/temp/Offline Demo/plugins/com.salesforce/src/android/libs/SalesforceSDK/libs/guava-r09.jar
