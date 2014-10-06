@@ -1,0 +1,115 @@
+<project name="DemoBuilds" basedir="." default="cleanAndBuildApp">
+    <property environment="env" />
+    <property name="artifactsDir" location="artifacts" />
+    <property name="env.BUILD_NUMBER" value="1" />  <!-- Jenkins will update this -->
+    <property name="codeSigningIdentity" value="iPhone Distribution: Salesforce.com" />
+    <property name="bundlePrefix" value="com.salesforce.mobilesdk.internal" />
+    <property name="projectName" value="ProjectNameMustBeSetByBuildCaller" />
+    
+    <target name="cleanAndBuildApp">
+        <antcall target="cleanApp" />
+        <antcall target="buildApp" />
+    </target>
+    
+    <!-- BUILD -->
+    
+    <target name="initArtifacts">
+        <mkdir dir="${artifactsDir}" />
+    </target>
+    
+    <target name="buildApp" description="Builds Debug candidate for an app, as defined by the input scheme.">
+        <property name="buildConfiguration" value="Debug" />
+        <property name="buildOutputDir" value="${artifactsDir}/${buildConfiguration}" />
+        <property name="outputArtifactPrefix" value="${projectName}-${env.BUILD_NUMBER}-${buildConfiguration}" />
+        
+        <antcall target="executeAppProject">
+            <param name="action" value="build" />
+            <param name="sdk" value="iphoneos" />
+            <param name="buildConfiguration" value="${buildConfiguration}" />
+            <param name="configBuildDir" value="${buildOutputDir}" />
+        </antcall>
+        
+        <antcall target="compress">
+            <param name="baseDir" value="${buildOutputDir}/${projectName}.app.dSYM" />
+            <param name="destFile" value="${artifactsDir}/${outputArtifactPrefix}-dSYMs.zip" />
+        </antcall>
+        
+        <antcall target="makeIPA">
+            <param name="buildOutputDir" value="${buildOutputDir}" />
+            <param name="projectName" value="${projectName}" />
+            <param name="outputIpaPath" value="${artifactsDir}/${outputArtifactPrefix}.ipa" />
+        </antcall>
+
+    </target>
+    
+    <target name="executeAppProject" depends="initArtifacts" description="Compiles the app project.">
+        <property name="buildConfiguration" value="Release" />
+        <property name="configBuildDir" value="${artifactsDir}/${buildConfiguration}" />
+        
+        <echo>${action}ing "${projectName}" with configuration "${buildConfiguration}" for SDK "${sdk}"</echo>
+        
+        <exec executable="xcodebuild" failonerror="true" logError="true">
+            <arg value="-project" />
+            <arg file="../platforms/ios/${projectName}.xcodeproj" />
+            <arg value="-configuration" />
+            <arg value="${buildConfiguration}" />
+            <arg value="-sdk" />
+            <arg value="${sdk}" />
+            <arg value="${action}" />
+            <arg value="CONFIGURATION_BUILD_DIR=${configBuildDir}" />
+            <arg value="CODE_SIGN_IDENTITY=${codeSigningIdentity}" />
+            <arg value="BUNDLE_PREFIX=${bundlePrefix}" />
+            <arg value="ONLY_ACTIVE_ARCH=NO" />
+        </exec>
+    </target>
+    
+    <target name="compress">
+        <exec executable="ditto">
+            <arg value="-k" /> <!-- PKZip format -->
+            <arg value="-c" /> <!-- compress -->
+            <arg value="--keepParent" />
+            <arg value="--norsrc" />
+            <arg value="${baseDir}" />
+            <arg file="${destFile}" />
+        </exec>
+    </target>
+    
+    <target name="makeIPA">
+        <!-- NB: Only enterprise device builds at this point.  Probably all we care about for sample apps. -->
+        <property name="provisioningProfilePath" value="${env.HOME}/Library/MobileDevice/Provisioning Profiles/4PZ44KB26X.com.salesforce.mobilesdk.internal.WILDCARD_Internal.mobileprovision" />
+        
+        <echo>Making IPA ${outputIpaPath}</echo>
+        
+        <exec executable="xcrun" failonerror="true" logError="true">
+            <arg value="-sdk" />
+            <arg value="iphoneos" />
+            <arg value="PackageApplication" />
+            <arg value="-v" />
+            <arg file="${buildOutputDir}/${projectName}.app" />
+            <arg value="-o" />
+            <arg file="${outputIpaPath}" />
+            <arg value="--sign" />
+            <arg value="${codeSigningIdentity}" />
+            <arg value="--embed" />
+            <arg file="${provisioningProfilePath}" />
+        </exec>
+    </target>
+    
+    <!-- CLEAN -->
+    
+    <target name="cleanApp" description="Cleans an app, as defined by the project name.">
+        <property name="buildConfiguration" value="Debug" />
+        <property name="buildOutputDir" value="${artifactsDir}/${buildConfiguration}" />
+        
+        <antcall target="executeAppProject">
+            <param name="action" value="clean" />
+            <param name="sdk" value="iphoneos" />
+            <param name="buildConfiguration" value="${buildConfiguration}" />
+            <param name="configBuildDir" value="${buildOutputDir}" />
+        </antcall>
+        
+        <delete dir="${artifactsDir}" />
+        
+    </target>
+    
+</project>
