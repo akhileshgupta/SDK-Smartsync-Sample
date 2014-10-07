@@ -12,6 +12,19 @@
     </target>
     
     <!-- BUILD -->
+
+    <target name="plist">
+        <exec executable="/usr/libexec/PlistBuddy">
+          <arg value="-c"/>
+          <arg value="Set CFBundleIdentifier ${BUNDLE_PREFIX}.${PRODUCT_NAME}"/>
+          <arg value="../platforms/ios/${projectName}/${projectName}-Info.plist"/>
+        </exec>
+        <exec executable="/usr/libexec/PlistBuddy">
+          <arg value="-c"/>
+          <arg value="Set CFBundleVersion ${env.BUILD_NUMBER}"/>
+          <arg value="../platforms/ios/${projectName}/${projectName}-Info.plist"/>
+        </exec>
+    </target>
     
     <target name="initArtifacts">
         <mkdir dir="${artifactsDir}" />
@@ -21,6 +34,8 @@
         <property name="buildConfiguration" value="Debug" />
         <property name="buildOutputDir" value="${artifactsDir}/${buildConfiguration}" />
         <property name="outputArtifactPrefix" value="${projectName}-${env.BUILD_NUMBER}-${buildConfiguration}" />
+        
+        <antcall target="plist"/>
         
         <antcall target="executeAppProject">
             <param name="action" value="build" />
