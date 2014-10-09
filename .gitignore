@@ -1,3 +1,7 @@
+**/.DS_Store
 **/project.xcworkspace/**
 **/xcuserdata/**
-**/.DS_Store
+**/android/**/bin
+**/android/**/gen
+**/.project
+**/.classpath
