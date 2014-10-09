@@ -66,4 +66,5 @@
     <preference name="StatusBarBackgroundColor" value="#f40009" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="Orientation" value="portrait" />
 </widget>
