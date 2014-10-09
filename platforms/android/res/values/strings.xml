@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">CocaCola</string>
-    <string name="account_type">us.cocacola.login</string>
-    <string name="app_package">us.cocacola</string>
+    <string name="app_name">MobileSDK-Demo</string>
+    <string name="account_type">com.salesforce.mobilesdk.internal.login</string>
+    <string name="app_package">com.salesforce.mobilesdk.internal</string>
 </resources>

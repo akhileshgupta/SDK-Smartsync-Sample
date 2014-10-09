@@ -20,6 +20,10 @@ module.exports = [
         "id": "com.salesforce.plugin.sfaccountmanager"
     },
     {
+        "file": "plugins/com.salesforce/www/com.salesforce.plugin.smartsync.js",
+        "id": "com.salesforce.plugin.smartsync"
+    },
+    {
         "file": "plugins/com.salesforce/www/com.salesforce.util.bootstrap.js",
         "id": "com.salesforce.util.bootstrap"
     },
@@ -62,6 +66,20 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/org.apache.cordova.console/www/console-via-logger.js",
+        "id": "org.apache.cordova.console.console",
+        "clobbers": [
+            "console"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.console/www/logger.js",
+        "id": "org.apache.cordova.console.logger",
+        "clobbers": [
+            "cordova.logger"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.device/www/device.js",
         "id": "org.apache.cordova.device.device",
         "clobbers": [
@@ -79,10 +97,11 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "com.salesforce": "2.3.0",
-    "org.apache.cordova.statusbar": "0.1.7",
+    "com.salesforce": "3.0.0",
+    "org.apache.cordova.statusbar": "0.1.8",
     "org.apache.cordova.network-information": "0.2.12",
-    "org.apache.cordova.device": "0.2.11",
+    "org.apache.cordova.console": "0.2.11",
+    "org.apache.cordova.device": "0.2.12",
     "com.phonegap.plugins.PushPlugin": "2.2.1"
 }
 // BOTTOM OF METADATA

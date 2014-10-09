@@ -263,11 +263,13 @@ public class OAuthWebviewHelper {
     }
 
    	/** 
-   	 * If you're only supporting recent versions of Android (e.g. 3.x and up), you can override this to be touch and get a better looking login UI
-   	 * You can override this by either subclass this class, or adding <string name="sf__oauth_display_type">touch</string> to your app's value
-   	 * resource so that it overrides the default value in the SDK library.
-   	 * 
-   	 * @return the OAuth login display type, e.g. mobile, touch, see the OAuth docs for the complete list of valid values.
+   	 * Override this to replace the default login webview's display param with
+   	 * your custom display param. You can override this by either subclassing this class,
+   	 * or adding "<string name="sf__oauth_display_type">desiredDisplayParam</string>"
+   	 * to your app's resource so that it overrides the default value in the SDK library.
+   	 *
+   	 * @return the OAuth login display type, e.g. 'mobile', 'touch',
+   	 * see the OAuth docs for the complete list of valid values.
    	 */
     protected String getAuthorizationDisplayType() {
     	return this.getContext().getString(R.string.oauth_display_type);
@@ -390,9 +392,9 @@ public class OAuthWebviewHelper {
                 		accountOptions.refreshToken, loginOptions.loginUrl,
                 		accountOptions.identityUrl, accountOptions.instanceUrl,
                 		accountOptions.orgId, accountOptions.userId,
-                		accountOptions.username, buildAccountName(accountOptions.username),
-                		loginOptions.clientSecret, accountOptions.communityId,
-                		accountOptions.communityUrl);
+                		accountOptions.username, buildAccountName(accountOptions.username,
+                		accountOptions.instanceUrl), loginOptions.clientSecret,
+                		accountOptions.communityId, accountOptions.communityUrl);
                 if (id.adminPrefs != null) {
                     final AdminPrefsManager prefManager = SalesforceSDKManager.getInstance().getAdminPrefsManager();
                     prefManager.setPrefs(id.adminPrefs, account);
@@ -473,7 +475,8 @@ public class OAuthWebviewHelper {
         		loginOptions, SalesforceSDKManager.getInstance().shouldLogoutWhenTokenRevoked());
 
         // Create account name (shown in Settings -> Accounts & sync)
-        String accountName = buildAccountName(accountOptions.username);
+        String accountName = buildAccountName(accountOptions.username,
+        		accountOptions.instanceUrl);
 
         // New account
         Bundle extras = clientManager.createNewAccount(accountName,
@@ -514,8 +517,9 @@ public class OAuthWebviewHelper {
     /**
      * @return name to be shown for account in Settings -> Accounts & Sync
      */
-    protected String buildAccountName(String username) {
-        return String.format("%s (%s)", username, SalesforceSDKManager.getInstance().getApplicationName());
+    protected String buildAccountName(String username, String instanceServer) {
+        return String.format("%s (%s) (%s)", username, instanceServer,
+        		SalesforceSDKManager.getInstance().getApplicationName());
     }
 
     /**

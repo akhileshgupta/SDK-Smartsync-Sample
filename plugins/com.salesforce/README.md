@@ -1,14 +1,16 @@
-Steps to use that plugin
+Steps to use the Cordova plugin for the Salesforce Mobile SDK
 ------------------------
 
 <pre>
-sudo npm install -g cordova
+npm install cordova -g
 
 cordova create TestApp
 cd TestApp
-cordova plugin add https://github.com/wmathurin/SalesforceMobileSDK-CordovaPlugin
+cordova plugin add https://github.com/forcedotcom/SalesforceMobileSDK-CordovaPlugin
 cordova platform add android
 node ./plugins/com.salesforce/tools/postinstall-android.js
 cordova platform add ios
-cordova build
+cordova prepare
 </pre>
+
+For more information, chek out [Salesforce Mobile SDK Development Guide](https://github.com/forcedotcom/SalesforceMobileSDK-Shared/blob/master/doc/mobile_sdk.pdf?raw=true)
