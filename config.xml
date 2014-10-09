@@ -9,9 +9,7 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <preference name="StatusBarOverlaysWebView" value="false" />
-    <preference name="StatusBarBackgroundColor" value="black" />
-    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="Fullscreen" value="true" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="Orientation" value="portrait" />
     <preference name="BackupWebStorage" value="local"/>
