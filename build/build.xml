@@ -5,6 +5,7 @@
     <property name="codeSigningIdentity" value="iPhone Distribution: Salesforce.com" />
     <property name="bundlePrefix" value="com.salesforce.mobilesdk.internal" />
     <property name="projectName" value="ProjectNameMustBeSetByBuildCaller" />
+    <property name="productName" value="${PRODUCT_NAME}" />
     
     <target name="cleanAndBuildApp">
         <antcall target="cleanApp" />
@@ -16,7 +17,7 @@
     <target name="plist">
         <exec executable="/usr/libexec/PlistBuddy">
           <arg value="-c"/>
-          <arg value="Set CFBundleIdentifier ${BUNDLE_PREFIX}.${PRODUCT_NAME}"/>
+          <arg value="Set CFBundleIdentifier ${BUNDLE_PREFIX}.${productName}"/>
           <arg value="../platforms/ios/${projectName}/${projectName}-Info.plist"/>
         </exec>
         <exec executable="/usr/libexec/PlistBuddy">
