@@ -29,7 +29,6 @@
 #import "MainViewController.h"
 
 #import <Cordova/CDVPlugin.h>
-#import <HockeySDK/HockeySDK.h>
 
 @implementation AppDelegate
 
@@ -88,13 +87,6 @@
 
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-
-    // Setup hockeyapp
-    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"a912ceb24b66a9261351fffcfe894951"];
-    [[BITHockeyManager sharedHockeyManager] startManager];
-    [[BITHockeyManager sharedHockeyManager].authenticator
-     authenticateInstallation];
-
 
     return YES;
 }

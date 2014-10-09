@@ -35,6 +35,8 @@
 #import "SFDefaultUserManagementViewController.h"
 #import "SFLogger.h"
 
+#import <HockeySDK/HockeySDK.h>
+
 @implementation AppDelegate (SalesforceHybridSDK)
 
 // its dangerous to override a method from within a category.
@@ -87,6 +89,11 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.autoresizesSubviews = YES;
+    
+    // Setup hockeyapp
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"a912ceb24b66a9261351fffcfe894951"];
+    [[BITHockeyManager sharedHockeyManager] startManager];
+    [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
     
     [self initializeAppViewState];
     [[SalesforceSDKManager sharedManager] launch];
