@@ -10,13 +10,21 @@
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1F766FE113BBADB100FB74C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F766FDC13BBADB100FB74C0 /* Localizable.strings */; };
+		268C8B4119E72D3F003136E3 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268C8B4019E72D3F003136E3 /* CoreText.framework */; };
+		268C8B4319E72D67003136E3 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268C8B4219E72D67003136E3 /* QuickLook.framework */; };
+		268C8B4419E72EF5003136E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41132558DF714A18A49853F2 /* Foundation.framework */; };
+		268C8B4519E72EFD003136E3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD65EF0C39E4440A4B529E3 /* QuartzCore.framework */; };
+		268C8B4619E72F1C003136E3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B30B00233D47CB83180C01 /* Security.framework */; };
+		268C8B4719E72F25003136E3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC8EE4DEAA24C018D93513E /* SystemConfiguration.framework */; };
+		268C8B4D19E72F65003136E3 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268C8B4919E72F65003136E3 /* HockeySDK.framework */; };
+		268C8B4E19E72F65003136E3 /* HockeySDK.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 268C8B4B19E72F65003136E3 /* HockeySDK.xcconfig */; };
+		268C8B4F19E72F65003136E3 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 268C8B4C19E72F65003136E3 /* HockeySDKResources.bundle */; };
 		26DC925819E63226001F009E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DC925719E63226001F009E /* Images.xcassets */; };
 		26DC925B19E63293001F009E /* Coke-icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26DC925919E63293001F009E /* Coke-icon-60@2x.png */; };
 		26DC925C19E63293001F009E /* Zero-icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26DC925A19E63293001F009E /* Zero-icon-60@2x.png */; };
 		26DC925F19E6329B001F009E /* Coke-Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 26DC925D19E6329B001F009E /* Coke-Default-568h@2x~iphone.png */; };
 		26DC926019E6329B001F009E /* Zero-Default-568h@2x iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 26DC925E19E6329B001F009E /* Zero-Default-568h@2x iPhone.png */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		2C87D8EF3CF14F81B99B2170 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC8EE4DEAA24C018D93513E /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
 		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
@@ -43,8 +51,6 @@
 		83B1A67E2D6C4FED81FF8F81 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D573C85743BD49DA8567486D /* CDVLogger.m */; };
 		8E0B281A2B3244F8ABAB23CC /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B32D8E830454F6C9464663F /* CDVReachability.m */; };
 		9D62A631D52945F092A2DB98 /* libSmartSync.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 935764923FD44BCFA2F72812 /* libSmartSync.a */; };
-		A8EB77EA8CC142528526BE3F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD65EF0C39E4440A4B529E3 /* QuartzCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		AB65A644D1B5465EA1E2578C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B30B00233D47CB83180C01 /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		AE59A2038CB54B9B88D9FC79 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D72E5CEF94B84B8889641BB1 /* libssl.a */; };
 		B7EB30D462E7404984543042 /* SalesforceSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 78EF82A1BFAC4ADBA5A5A5DF /* SalesforceSDKResources.bundle */; };
 		B84C3CA1F82E430D95A35714 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 069B28D7173E40BEB74E1DF9 /* Settings.bundle */; };
@@ -53,7 +59,6 @@
 		CC04DD46A4CB465DB812378D /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B05C5FFB08854744B666D35F /* libcrypto.a */; };
 		CFE08ABB59EF4568A907B2C4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DACE450AA5E3462D9AF9971D /* libz.dylib */; };
 		D367DD9EC61B454BB52791B9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEB21C4E2324340A7B95441 /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		E0B8796920054BC88FE835FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41132558DF714A18A49853F2 /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E99D2618E31945F2B8F1FDD4 /* AppDelegate+SalesforceHybridSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3828B90A0F5942B09BE93476 /* AppDelegate+SalesforceHybridSDK.m */; };
 		EE7F15AB9AA34F00843B5EFB /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CDFED731E445048398E4AF /* CDVStatusBar.m */; };
 		F620AB8E99F549B39E4D5D6E /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = EFADA24808764D52AB07C346 /* CDVConnection.m */; };
@@ -93,6 +98,11 @@
 		1F766FE013BBADB100FB74C0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Localizable.strings; sourceTree = "<group>"; };
 		2197395C031645559AC3CC53 /* SFSDKAppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFSDKAppConfig.h; path = com.salesforce/salesforce/SFSDKAppConfig.h; sourceTree = "<group>"; };
 		24B30B00233D47CB83180C01 /* Security.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		268C8B4019E72D3F003136E3 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		268C8B4219E72D67003136E3 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		268C8B4919E72F65003136E3 /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
+		268C8B4B19E72F65003136E3 /* HockeySDK.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = HockeySDK.xcconfig; sourceTree = "<group>"; };
+		268C8B4C19E72F65003136E3 /* HockeySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HockeySDKResources.bundle; sourceTree = "<group>"; };
 		26DC925719E63226001F009E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "MobileSDK-Demo/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		26DC925919E63293001F009E /* Coke-icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Coke-icon-60@2x.png"; sourceTree = "<group>"; };
 		26DC925A19E63293001F009E /* Zero-icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Zero-icon-60@2x.png"; sourceTree = "<group>"; };
@@ -175,11 +185,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */,
-				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
-				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
-				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
-				5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */,
 				48C56AE821E84A00858E0D9E /* libSalesforceCommonUtils.a in Frameworks */,
 				BE8ACFB0ADAA4C90B2D1AD20 /* libSalesforceHybridSDK.a in Frameworks */,
 				3BD4514CD7CE442A94D7A66E /* libSalesforceOAuth.a in Frameworks */,
@@ -194,15 +199,23 @@
 				AE59A2038CB54B9B88D9FC79 /* libssl.a in Frameworks */,
 				30617BD65A064F23AFDC35F5 /* libxml2.dylib in Frameworks */,
 				CFE08ABB59EF4568A907B2C4 /* libz.dylib in Frameworks */,
+				268C8B4719E72F25003136E3 /* SystemConfiguration.framework in Frameworks */,
+				268C8B4D19E72F65003136E3 /* HockeySDK.framework in Frameworks */,
+				268C8B4619E72F1C003136E3 /* Security.framework in Frameworks */,
+				268C8B4519E72EFD003136E3 /* QuartzCore.framework in Frameworks */,
+				268C8B4419E72EF5003136E3 /* Foundation.framework in Frameworks */,
+				268C8B4319E72D67003136E3 /* QuickLook.framework in Frameworks */,
+				268C8B4119E72D3F003136E3 /* CoreText.framework in Frameworks */,
+				5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
+				5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */,
 				36834BDAE010416D87DADED6 /* AddressBook.framework in Frameworks */,
 				7DCB2660C58B4BC793D8EE53 /* AddressBookUI.framework in Frameworks */,
-				E0B8796920054BC88FE835FF /* Foundation.framework in Frameworks */,
 				667DCB876081460380C654F3 /* MessageUI.framework in Frameworks */,
-				A8EB77EA8CC142528526BE3F /* QuartzCore.framework in Frameworks */,
-				AB65A644D1B5465EA1E2578C /* Security.framework in Frameworks */,
-				2C87D8EF3CF14F81B99B2170 /* SystemConfiguration.framework in Frameworks */,
 				3482E864B2284B589D1BF16C /* UIKit.framework in Frameworks */,
 				D367DD9EC61B454BB52791B9 /* ImageIO.framework in Frameworks */,
+				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +257,25 @@
 				1F766FDF13BBADB100FB74C0 /* Localizable.strings */,
 			);
 			path = es.lproj;
+			sourceTree = "<group>";
+		};
+		268C8B4819E72F65003136E3 /* HockeySDK.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				268C8B4919E72F65003136E3 /* HockeySDK.framework */,
+				268C8B4A19E72F65003136E3 /* Resources */,
+			);
+			name = HockeySDK.embeddedframework;
+			path = "HockeySDK-iOS/HockeySDK.embeddedframework";
+			sourceTree = "<group>";
+		};
+		268C8B4A19E72F65003136E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				268C8B4B19E72F65003136E3 /* HockeySDK.xcconfig */,
+				268C8B4C19E72F65003136E3 /* HockeySDKResources.bundle */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
@@ -294,10 +326,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5AEE5B34173C68D80009041E /* CoreLocation.framework */,
-				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
-				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
-				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
 				323745786C4A41A28825A971 /* libSalesforceCommonUtils.a */,
 				46235DC0ABF24431908FC62F /* libSalesforceHybridSDK.a */,
 				DFED9D81E8564E73A1D34F5B /* libSalesforceOAuth.a */,
@@ -312,6 +340,13 @@
 				D72E5CEF94B84B8889641BB1 /* libssl.a */,
 				7376E1384E03496C907CA082 /* libxml2.dylib */,
 				DACE450AA5E3462D9AF9971D /* libz.dylib */,
+				268C8B4819E72F65003136E3 /* HockeySDK.embeddedframework */,
+				268C8B4219E72D67003136E3 /* QuickLook.framework */,
+				268C8B4019E72D3F003136E3 /* CoreText.framework */,
+				5AEE5B34173C68D80009041E /* CoreLocation.framework */,
+				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
 				4CC9E4B0DCC6417A9D31C0B0 /* AddressBook.framework */,
 				CB34D0C5F3264194BE526557 /* AddressBookUI.framework */,
 				41132558DF714A18A49853F2 /* Foundation.framework */,
@@ -434,6 +469,7 @@
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
 				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				268C8B3F19E72CF8003136E3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -500,7 +536,9 @@
 				26DC925B19E63293001F009E /* Coke-icon-60@2x.png in Resources */,
 				26DC925C19E63293001F009E /* Zero-icon-60@2x.png in Resources */,
 				1F766FE113BBADB100FB74C0 /* Localizable.strings in Resources */,
+				268C8B4E19E72F65003136E3 /* HockeySDK.xcconfig in Resources */,
 				26DC926019E6329B001F009E /* Zero-Default-568h@2x iPhone.png in Resources */,
+				268C8B4F19E72F65003136E3 /* HockeySDKResources.bundle in Resources */,
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				26DC925819E63226001F009E /* Images.xcassets in Resources */,
 				30A0434814DC770100060A13 /* Localizable.strings in Resources */,
@@ -513,6 +551,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		268C8B3F19E72CF8003136E3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE=\"${SRCROOT}/HockeySDK-iOS/BuildAgent\"\nif [ -f \"$FILE\" ]; then\n\"$FILE\"\nfi";
+		};
 		304B58A110DAC018002A0835 /* Copy www directory */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -605,6 +656,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HockeySDK-iOS/HockeySDK.embeddedframework",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -627,6 +682,7 @@
 					"\"$(SRCROOT)/MobileSDK-Demo/Plugins/com.salesforce\"",
 					"\"$(SRCROOT)/MobileSDK-Demo/Plugins/com.salesforce\"",
 					"\"$(SRCROOT)/MobileSDK-Demo/Plugins/com.salesforce\"",
+					"$(PROJECT_DIR)/MobileSDK-Demo/Plugins/com.salesforce",
 				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -655,6 +711,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HockeySDK-iOS/HockeySDK.embeddedframework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MobileSDK-Demo/MobileSDK-Demo-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
@@ -675,6 +735,7 @@
 					"\"$(SRCROOT)/MobileSDK-Demo/Plugins/com.salesforce\"",
 					"\"$(SRCROOT)/MobileSDK-Demo/Plugins/com.salesforce\"",
 					"\"$(SRCROOT)/MobileSDK-Demo/Plugins/com.salesforce\"",
+					"$(PROJECT_DIR)/MobileSDK-Demo/Plugins/com.salesforce",
 				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",

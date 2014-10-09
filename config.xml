@@ -10,7 +10,7 @@
     <content src="index.html" />
     <access origin="*" />
     <preference name="StatusBarOverlaysWebView" value="false" />
-    <preference name="StatusBarBackgroundColor" value="black" />
+    <preference name="StatusBarBackgroundColor" value="#f40009" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="Orientation" value="portrait" />
