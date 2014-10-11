@@ -10,10 +10,10 @@
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1F766FE113BBADB100FB74C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F766FDC13BBADB100FB74C0 /* Localizable.strings */; };
+		26CD522919E8FCF3002FA485 /* Cardinal-icon-60@2x cardinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 26CD522819E8FCF3002FA485 /* Cardinal-icon-60@2x cardinal.png */; };
+		26CD522B19E8FCFE002FA485 /* Cardinal-Default-568h@2x iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 26CD522A19E8FCFE002FA485 /* Cardinal-Default-568h@2x iPhone.png */; };
 		26DC925819E63226001F009E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DC925719E63226001F009E /* Images.xcassets */; };
-		26DC925B19E63293001F009E /* Coke-icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26DC925919E63293001F009E /* Coke-icon-60@2x.png */; };
 		26DC925C19E63293001F009E /* Zero-icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26DC925A19E63293001F009E /* Zero-icon-60@2x.png */; };
-		26DC925F19E6329B001F009E /* Coke-Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 26DC925D19E6329B001F009E /* Coke-Default-568h@2x~iphone.png */; };
 		26DC926019E6329B001F009E /* Zero-Default-568h@2x iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 26DC925E19E6329B001F009E /* Zero-Default-568h@2x iPhone.png */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		2C87D8EF3CF14F81B99B2170 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC8EE4DEAA24C018D93513E /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -93,10 +93,10 @@
 		1F766FE013BBADB100FB74C0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Localizable.strings; sourceTree = "<group>"; };
 		2197395C031645559AC3CC53 /* SFSDKAppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFSDKAppConfig.h; path = com.salesforce/salesforce/SFSDKAppConfig.h; sourceTree = "<group>"; };
 		24B30B00233D47CB83180C01 /* Security.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		26CD522819E8FCF3002FA485 /* Cardinal-icon-60@2x cardinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cardinal-icon-60@2x cardinal.png"; sourceTree = "<group>"; };
+		26CD522A19E8FCFE002FA485 /* Cardinal-Default-568h@2x iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cardinal-Default-568h@2x iPhone.png"; sourceTree = "<group>"; };
 		26DC925719E63226001F009E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "MobileSDK-Demo/Images.xcassets"; sourceTree = SOURCE_ROOT; };
-		26DC925919E63293001F009E /* Coke-icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Coke-icon-60@2x.png"; sourceTree = "<group>"; };
 		26DC925A19E63293001F009E /* Zero-icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Zero-icon-60@2x.png"; sourceTree = "<group>"; };
-		26DC925D19E6329B001F009E /* Coke-Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Coke-Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
 		26DC925E19E6329B001F009E /* Zero-Default-568h@2x iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Zero-Default-568h@2x iPhone.png"; sourceTree = "<group>"; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -383,7 +383,7 @@
 		308D052D1370CCF300D202BF /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				26DC925919E63293001F009E /* Coke-icon-60@2x.png */,
+				26CD522819E8FCF3002FA485 /* Cardinal-icon-60@2x cardinal.png */,
 				26DC925A19E63293001F009E /* Zero-icon-60@2x.png */,
 			);
 			path = icons;
@@ -392,7 +392,7 @@
 		308D05311370CCF300D202BF /* splash */ = {
 			isa = PBXGroup;
 			children = (
-				26DC925D19E6329B001F009E /* Coke-Default-568h@2x~iphone.png */,
+				26CD522A19E8FCFE002FA485 /* Cardinal-Default-568h@2x iPhone.png */,
 				26DC925E19E6329B001F009E /* Zero-Default-568h@2x iPhone.png */,
 			);
 			path = splash;
@@ -497,15 +497,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26DC925B19E63293001F009E /* Coke-icon-60@2x.png in Resources */,
 				26DC925C19E63293001F009E /* Zero-icon-60@2x.png in Resources */,
 				1F766FE113BBADB100FB74C0 /* Localizable.strings in Resources */,
 				26DC926019E6329B001F009E /* Zero-Default-568h@2x iPhone.png in Resources */,
+				26CD522B19E8FCFE002FA485 /* Cardinal-Default-568h@2x iPhone.png in Resources */,
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				26DC925819E63226001F009E /* Images.xcassets in Resources */,
 				30A0434814DC770100060A13 /* Localizable.strings in Resources */,
 				B84C3CA1F82E430D95A35714 /* Settings.bundle in Resources */,
-				26DC925F19E6329B001F009E /* Coke-Default-568h@2x~iphone.png in Resources */,
+				26CD522919E8FCF3002FA485 /* Cardinal-icon-60@2x cardinal.png in Resources */,
 				B7EB30D462E7404984543042 /* SalesforceSDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

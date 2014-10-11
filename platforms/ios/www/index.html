@@ -61,40 +61,18 @@ license that can be found in the LICENSE file.
   <script type="text/javascript" src="cordova_plugins.js"></script>
   <!-- End Mobile SDK script includes -->
 
-
-  <style shim-shadowdom>
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 14px;
-    }
-    * {
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-    }
-    body /deep/ .round {
-      width:50px;
-      height:50px;
-      background:#1abc9c;
-      border-radius: 50%;
-      text-align: center;
-      display: table-cell; 
-      vertical-align: middle; 
-      color: white;
-      font-size: 19px;
-      line-height: 50px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css"  shim-shadowdom/>
 </head>
 
 <body unresolved touch-action="none">
 
     <!-- ACCOUNTS -->
-     <link rel="stylesheet" href="coke.css"/>
+     <link rel="stylesheet" href="cardinal.css" shim-shadowdom/>
      <mobile-app sobject="Account" searchfields="Name" displayfields="Name Phone Industry BillingCity Description"></mobile-app>
     <!-- -->
     
     <!-- CONTACTS -/->
-    <link rel="stylesheet" href="zero.css"/>
+    <link rel="stylesheet" href="zero.css" shim-shadowdom/>
     <mobile-app sobject="Contact" searchfields="FirstName LastName" displayfields="FirstName LastName Title Phone Email Department HomePhone"></mobile-app>
     <!-- -->
 
