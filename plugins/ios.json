@@ -45,6 +45,10 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"com.salesforce.smartsync\"><param name=\"ios-package\" value=\"SFSmartSyncPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" onload=\"true\" value=\"CDVStatusBar\" /></feature>",
                             "count": 1
                         },
@@ -53,15 +57,15 @@
                             "count": 1
                         },
                         {
-                            "xml": "<preference name=\"StatusBarBackgroundColor\" value=\"#000000\" />",
-                            "count": 1
-                        },
-                        {
                             "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
                             "count": 1
                         },
                         {
                             "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -152,6 +156,12 @@
                             "xml": "true",
                             "count": 1
                         }
+                    ],
+                    "ImageIO.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
                     ]
                 }
             }
@@ -159,21 +169,24 @@
     },
     "installed_plugins": {
         "com.salesforce": {
-            "PACKAGE_NAME": "us.cocacola"
+            "PACKAGE_NAME": "com.salesforce.mobilesdk.internal"
         },
         "org.apache.cordova.statusbar": {
-            "PACKAGE_NAME": "us.cocacola"
+            "PACKAGE_NAME": "com.salesforce.mobilesdk.internal"
         },
         "org.apache.cordova.network-information": {
-            "PACKAGE_NAME": "us.cocacola"
+            "PACKAGE_NAME": "com.salesforce.mobilesdk.internal"
+        },
+        "org.apache.cordova.console": {
+            "PACKAGE_NAME": "com.salesforce.mobilesdk.internal"
         }
     },
     "dependent_plugins": {
         "org.apache.cordova.device": {
-            "PACKAGE_NAME": "us.cocacola"
+            "PACKAGE_NAME": "com.salesforce.mobilesdk.internal"
         },
         "com.phonegap.plugins.PushPlugin": {
-            "PACKAGE_NAME": "us.cocacola"
+            "PACKAGE_NAME": "com.salesforce.mobilesdk.internal"
         }
     }
 }

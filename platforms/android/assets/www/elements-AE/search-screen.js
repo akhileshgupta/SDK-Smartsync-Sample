@@ -54,7 +54,10 @@ Polymer('search-screen', {
       this._fetching = true;
       this.async(function() { 
         var that = this;
-        this.$.list.fetchMore().always(function() { that._fetching = false; }); 
+        var promise = this.$.list.fetchMore();
+        // Promise may be null if no more records are to be fetched
+        if (promise) promise.always(function() { that._fetching = false; }); 
+        else that._fetching = false;
       });
     }
   },
@@ -65,9 +68,9 @@ Polymer('search-screen', {
 
   searchFocused: function() {
     var input = this.$.search.$.input.$.input;
+    input.focus();
     if (!this._searchFocued) {
       this._searchFocued = true;
-      input.focus();
       input.style.opacity = 0;
       // Need to add this for iOS old webiew as the cursor acts weird otherwise
       if (navigator.userAgent.search(/iPhone/) > 0) input.style.visibility = 'hidden';
@@ -138,6 +141,9 @@ Polymer('search-screen', {
 
   stopClick: function(e) {
     e.preventDefault();
+    if (e.currentTarget == this.$.uilist && this._searchFocued) {
+      this.$.search.$.input.$.input.blur();
+    }
   },
 
   attached: function() {

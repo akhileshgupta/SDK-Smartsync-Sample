@@ -9,11 +9,11 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"PushPlugin\"><param name=\"android-package\" value=\"com.plugin.gcm.PushPlugin\" /></feature>",
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "xml": "<feature name=\"PushPlugin\"><param name=\"android-package\" value=\"com.plugin.gcm.PushPlugin\" /></feature>",
                             "count": 1
                         },
                         {
@@ -45,11 +45,15 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
+                            "xml": "<feature name=\"com.salesforce.smartsync\"><param name=\"android-package\" value=\"com.salesforce.androidsdk.smartsync.phonegap.SmartSyncPlugin\" /></feature>",
                             "count": 1
                         },
                         {
                             "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" onload=\"true\" value=\"org.apache.cordova.statusbar.StatusBar\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -79,11 +83,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<permission android:name=\"us.cocacola.permission.C2D_MESSAGE\" android:protectionLevel=\"signature\" />",
+                            "xml": "<permission android:name=\"com.salesforce.mobilesdk.internal.permission.C2D_MESSAGE\" android:protectionLevel=\"signature\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"us.cocacola.permission.C2D_MESSAGE\" />",
+                            "xml": "<uses-permission android:name=\"com.salesforce.mobilesdk.internal.permission.C2D_MESSAGE\" />",
                             "count": 1
                         }
                     ],
@@ -93,7 +97,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<receiver android:name=\"com.plugin.gcm.CordovaGCMBroadcastReceiver\" android:permission=\"com.google.android.c2dm.permission.SEND\"><intent-filter><action android:name=\"com.google.android.c2dm.intent.RECEIVE\" /><action android:name=\"com.google.android.c2dm.intent.REGISTRATION\" /><category android:name=\"us.cocacola\" /></intent-filter></receiver>",
+                            "xml": "<receiver android:name=\"com.plugin.gcm.CordovaGCMBroadcastReceiver\" android:permission=\"com.google.android.c2dm.permission.SEND\"><intent-filter><action android:name=\"com.google.android.c2dm.intent.RECEIVE\" /><action android:name=\"com.google.android.c2dm.intent.REGISTRATION\" /><category android:name=\"com.salesforce.mobilesdk.internal\" /></intent-filter></receiver>",
                             "count": 1
                         },
                         {
@@ -117,11 +121,11 @@
                 "parents": {
                     "/resources": [
                         {
-                            "xml": "<string name=\"account_type\">us.cocacola.login</string>",
+                            "xml": "<string name=\"account_type\">com.salesforce.mobilesdk.internal.login</string>",
                             "count": 1
                         },
                         {
-                            "xml": "<string name=\"app_package\">us.cocacola</string>",
+                            "xml": "<string name=\"app_package\">com.salesforce.mobilesdk.internal</string>",
                             "count": 1
                         }
                     ]
@@ -130,22 +134,25 @@
         }
     },
     "installed_plugins": {
-        "com.phonegap.plugins.PushPlugin": {
-            "PACKAGE_NAME": "us.cocacola"
-        },
         "com.salesforce": {
-            "PACKAGE_NAME": "us.cocacola"
-        },
-        "org.apache.cordova.network-information": {
-            "PACKAGE_NAME": "us.cocacola"
+            "PACKAGE_NAME": "com.salesforce.mobilesdk.internal"
         },
         "org.apache.cordova.statusbar": {
-            "PACKAGE_NAME": "us.cocacola"
+            "PACKAGE_NAME": "com.salesforce.mobilesdk.internal"
+        },
+        "org.apache.cordova.network-information": {
+            "PACKAGE_NAME": "com.salesforce.mobilesdk.internal"
+        },
+        "org.apache.cordova.console": {
+            "PACKAGE_NAME": "com.salesforce.mobilesdk.internal"
         }
     },
     "dependent_plugins": {
         "org.apache.cordova.device": {
-            "PACKAGE_NAME": "us.cocacola"
+            "PACKAGE_NAME": "com.salesforce.mobilesdk.internal"
+        },
+        "com.phonegap.plugins.PushPlugin": {
+            "PACKAGE_NAME": "com.salesforce.mobilesdk.internal"
         }
     }
 }

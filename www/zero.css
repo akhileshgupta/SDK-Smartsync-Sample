@@ -1,0 +1,10 @@
+core-toolbar.header-toolbar,
+detail-screen #toolbar,
+sync-screen #toolbar,
+force-paper-input .focused-underline,
+force-paper-input .cursor {
+    background-color: black;
+}
+force-paper-input[focused] .floated-label {
+    color: black;
+}
